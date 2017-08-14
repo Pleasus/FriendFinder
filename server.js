@@ -1,4 +1,4 @@
-// define the dependencies
+// Define the dependencies
 var express = require('express');
 var bodyParser = require('body-parser');
 var path = require('path');
@@ -16,7 +16,7 @@ app.use(bodyParser.json({type:'application/vnd.api+json'}));
 // Middleware used by Express to serve static content
 app.use(express.static('app'));
 
-//Points to routing files
+//Points to route files
 require('./app/routing/apiRoutes.js')(app); 
 require('./app/routing/htmlRoutes.js')(app);
 

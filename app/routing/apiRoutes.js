@@ -1,13 +1,15 @@
+// Require information from the friends.js file
 var friendData = require('../data/friends.js');
 
-
+// Export the function result
 module.exports = function (app) {
 
+	// Get request for information from the friends file
 	app.get('/api/friends', function(req, res){
 		res.json(friendData);
 	})
 
-
+	// Post new friend scores to the friends array
 	app.post('/api/friends', function(req, res){
 		var newFriend = req.body;
 
